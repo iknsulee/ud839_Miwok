@@ -22,7 +22,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -43,7 +43,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
         numberTextView.setText(currentWord.getMiwokTranslation());
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image1);
-        imageView.setImageResource(currentWord.getImageResourceId());
+
+        // Check if an image is provided for this word or not
+        if (currentWord.hasImage()) {
+            // If an image is available, display the provided image based on the resource ID
+            imageView.setImageResource(currentWord.getImageResourceId());
+            // Make sure the view is visible
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            // Otherwise hide the ImageView (set visibility to GONE)
+            imageView.setVisibility(View.GONE);
+        }
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

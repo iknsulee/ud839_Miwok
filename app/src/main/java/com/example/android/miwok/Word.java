@@ -16,7 +16,9 @@ public class Word {
      */
     private String mMiwokTranslation;
 
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMGAE_PROVIDED;
+
+    private static final int NO_IMGAE_PROVIDED = -1;
 
     /**
      * Create a new Word object.
@@ -52,5 +54,9 @@ public class Word {
 
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    public boolean hasImage() {
+        return mImageResourceId != NO_IMGAE_PROVIDED;
     }
 }
