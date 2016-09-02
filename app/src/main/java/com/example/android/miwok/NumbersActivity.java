@@ -18,6 +18,7 @@ package com.example.android.miwok;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -57,6 +58,7 @@ public class NumbersActivity extends AppCompatActivity {
 //                Toast toast = Toast.makeText(NumbersActivity.this, "clicked", Toast.LENGTH_SHORT);
 //                toast.show();
 
+                Log.i("NumbersActivity", "position: " + position);
                 mediaPlayer = MediaPlayer.create(NumbersActivity.this, R.raw.number_one);
                 mediaPlayer.start();
 
