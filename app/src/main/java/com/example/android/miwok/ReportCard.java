@@ -3,51 +3,40 @@ package com.example.android.miwok;
 import java.util.ArrayList;
 
 public class ReportCard {
-    private ArrayList<String> studentNames;
-    private ArrayList<String> studentMathGrades;
-    private ArrayList<String> studentMusicGrades;
+    private ArrayList<String> mathGrades;
+    private ArrayList<String> musicGrades;
 
     public ReportCard() {
-        studentNames = new ArrayList<String>();
-        studentMathGrades = new ArrayList<String>();
-        studentMusicGrades = new ArrayList<String>();
+        mathGrades = new ArrayList<String>();
+        musicGrades = new ArrayList<String>();
     }
 
     public void addGrade(String name, String mathGrade, String musicGrade) {
-        studentNames.add(name);
-        studentMathGrades.add(mathGrade);
-        studentMusicGrades.add(musicGrade);
+        mathGrades.add(mathGrade);
+        musicGrades.add(musicGrade);
     }
 
-    public ArrayList<String> getStudentNames() {
-        return studentNames;
+    public ArrayList<String> getMathGrades() {
+        return mathGrades;
     }
 
-    public void setStudentNames(ArrayList<String> studentNames) {
-        this.studentNames = studentNames;
+    public void setMathGrades(ArrayList<String> mathGrades) {
+        this.mathGrades = mathGrades;
     }
 
-    public ArrayList<String> getStudentMathGrades() {
-        return studentMathGrades;
+    public ArrayList<String> getMusicGrades() {
+        return musicGrades;
     }
 
-    public void setStudentMathGrades(ArrayList<String> studentMathGrades) {
-        this.studentMathGrades = studentMathGrades;
-    }
-
-    public ArrayList<String> getStudentMusicGrades() {
-        return studentMusicGrades;
-    }
-
-    public void setStudentMusicGrades(ArrayList<String> studentMusicGrades) {
-        this.studentMusicGrades = studentMusicGrades;
+    public void setMusicGrades(ArrayList<String> musicGrades) {
+        this.musicGrades = musicGrades;
     }
 
     @Override
     public String toString() {
         String output = null;
-        for (int i = 0; i < studentNames.size(); i++) {
-            output = "name: " + studentNames.get(i) + ", math: " + studentMathGrades.get(i) + ", music: " + studentMusicGrades.get(i) + "\n";
+        for (int i = 0; i < mathGrades.size(); i++) {
+            output = "math: " + mathGrades.get(i) + ", music: " + musicGrades.get(i) + "\n";
         }
 
         return output;
