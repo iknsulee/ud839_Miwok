@@ -11,7 +11,7 @@ public class ReportCard {
         musicGrades = new ArrayList<String>();
     }
 
-    public void addGrade(String name, String mathGrade, String musicGrade) {
+    public void addGrade(String mathGrade, String musicGrade) {
         mathGrades.add(mathGrade);
         musicGrades.add(musicGrade);
     }
