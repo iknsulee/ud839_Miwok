@@ -3,6 +3,12 @@ package com.example.android.miwok;
 import java.util.ArrayList;
 
 public class ReportCard {
+    public static final String GRADE_A = "A";
+    public static final String GRADE_B = "B";
+    public static final String GRADE_C = "C";
+    public static final String GRADE_D = "D";
+    public static final String GRADE_F = "F";
+
     private ArrayList<String> mathGrades;
     private ArrayList<String> musicGrades;
 
